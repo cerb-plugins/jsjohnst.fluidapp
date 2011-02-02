@@ -1,0 +1,62 @@
+<!DOCTYPE plugin SYSTEM "../../libs/devblocks/plugin.dtd">
+<plugin>
+	<id>jsjohnst.fluidapp</id>
+	<name>[Extras] Fluid.app Integration</name>
+	<description>Provides data needed by Fluid.app for Growl alerts and Mac OS X dock badges</description>
+	<author>Jeremy Johnstone @ Yahoo!</author>
+	<revision>1</revision>
+	<link>http://www.jeremyjohnstone.com/</link>
+	<image>plugin.png</image>
+ 
+ 	<!-- Plugin Dependencies -->
+	
+	<dependencies>
+		<require plugin_id="cerberusweb.core" version="5.0.0-beta" />
+	</dependencies>
+
+	<!-- Extensions -->
+ 
+	<extensions>
+		
+		<!-- Prebody Renderers -->
+		
+		<extension point="cerberusweb.renderer.prebody">
+			<id>jsjohnst.fluidapp.prebody</id>
+			<name>Fluid.app Pre-body Renderer</name>
+			<class>
+				<file>plugin.php</file>
+				<name>FluidAppDataPreBodyRenderer</name>
+			</class>
+		</extension>
+								
+		<!-- Controllers -->
+		
+        <extension point="devblocks.controller">
+            <id>jsjohnst.fluidapp.apifetch</id>
+            <name>Fluid.app API Fetch</name>
+            <class>
+                <file>plugin.php</file>
+                <name>FluidAppDataAPIFetch</name>
+            </class>
+            <params>
+                <param key="uri" value="fluidapp.jsonp" />
+            </params>
+        </extension>
+
+		<!-- Preference Tabs  -->
+
+		<extension point="cerberusweb.preferences.tab">
+			<id>jsjohnst.fluidapp.pref</id>
+			<name>Fluid.app Preferences</name>
+			<class>
+				<file>plugin.php</file>
+				<name>FluidAppPreferences</name>
+			</class>
+			<params>
+				<param key="uri" value="fluidapp" />
+				<param key="title" value="Fluid.app" />
+			</params>
+		</extension>
+
+    </extensions> 
+</plugin>
