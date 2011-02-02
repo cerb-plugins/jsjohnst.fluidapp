@@ -6,7 +6,7 @@ Copyright (C) 2011 WebGroup Media, LLC.
 
 What's this?
 ------------
-This plugin adds integrates Cerb5 with [Fluid.app](http://fluidapp.com) (a site-specific browser) on Mac OS X. 
+This plugin integrates Cerb5 with [Fluid.app](http://fluidapp.com) (a site-specific browser) on Mac OS X. 
 It features Growl alerts and a dock badge with the number of unread helpdesk notifications.
 
 Installation
