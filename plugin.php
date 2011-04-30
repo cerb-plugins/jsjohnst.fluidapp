@@ -97,7 +97,7 @@ class DAO_FluidApp {
 				
 			case 'group_tickets':
 				$view = C4_AbstractViewLoader::getView(CerberusApplication::VIEW_MAIL_WORKFLOW);
-				$totals = $view->getCounts('group');
+				$totals = $view->getSubtotalCounts('group');
 				
 				if(is_array($totals))
 		        foreach($totals as $data) {

@@ -1,5 +1,5 @@
-<h2>Fluid.app Integration</h2>
-<br>
+<fieldset>
+<legend>Fluid.app Integration</legend>
 
 <form action="{devblocks_url}{/devblocks_url}" method="post">
 <input type="hidden" name="c" value="preferences">
@@ -13,12 +13,13 @@
 
 <b>Growl:</b><br>
 <label><input type="checkbox" name="growl_enabled" value="1" {if $growl_enabled}checked="checked"{/if}> Show Growl Notifications</label>
-<blockquote style="">
+<blockquote style="margin-left:20px;">
 	<b>Make sticky if notification contains the following text:</b> <i>(one per line)</i><br>
 	<textarea cols="65" rows="5" name="growl_sticky_patterns">{$growl_sticky_patterns}</textarea><br>
 </blockquote>
 <br> 	
 
-<button type="submit"><span class="cerb-sprite sprite-check"></span> {$translate->_('common.save_changes')|capitalize}</button>
-	
+<button type="submit"><span class="cerb-sprite2 sprite-tick-circle-frame"></span> {$translate->_('common.save_changes')|capitalize}</button>
 </form>
+
+</fieldset>
