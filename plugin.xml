@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.devblocks.com/schema/plugin.xsd">
 	<id>jsjohnst.fluidapp</id>
-	<name>[Extras] Fluid.app Integration</name>
+	<name>Fluid.app Integration</name>
 	<description>Provides data needed by Fluid.app for Growl alerts and Mac OS X dock badges</description>
 	<author>Jeremy Johnstone @ LinkedIn</author>
 	<version>1.0.1</version>
