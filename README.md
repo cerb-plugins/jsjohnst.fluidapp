@@ -1,7 +1,7 @@
 Cerb5 Plugins - jsjohnst.fluidapp
 ===========================================
 Copyright (C) 2010 Jeremy Johnstone
-Copyright (C) 2011 WebGroup Media, LLC.  
+Copyright (C) 2012 WebGroup Media, LLC.  
 [http://www.cerberusweb.com/](http://www.cerberusweb.com/)  
 
 What's this?
