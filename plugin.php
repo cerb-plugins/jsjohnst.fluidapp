@@ -94,16 +94,6 @@ class DAO_FluidApp {
 			case 'notifications':
 				$count = intval(DAO_Notification::getUnreadCountByWorker($worker_id));
 				break;
-				
-			case 'group_tickets':
-				$view = C4_AbstractViewLoader::getView(CerberusApplication::VIEW_MAIL_WORKFLOW);
-				$totals = $view->getSubtotalCounts('group');
-				
-				if(is_array($totals))
-		        foreach($totals as $data) {
-		            $count += intval($data["total"]);
-		        }
-				break;
 		}
 		
 		return $count;
