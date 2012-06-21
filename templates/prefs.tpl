@@ -1,4 +1,4 @@
-<fieldset>
+<fieldset class="peek">
 <legend>Fluid.app Integration</legend>
 
 <form action="{devblocks_url}{/devblocks_url}" method="post">
