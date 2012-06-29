@@ -1,4 +1,4 @@
-Cerb5 Plugins - jsjohnst.fluidapp
+Cerb Plugins - jsjohnst.fluidapp
 ===========================================
 Copyright (C) 2010 Jeremy Johnstone
 Copyright (C) 2012 WebGroup Media, LLC.  
@@ -12,7 +12,7 @@ It features Growl alerts and a dock badge with the number of unread helpdesk not
 Installation
 ------------
 * Change directory to **/cerb6/storage/plugins/**
-* `git clone git://github.com/cerb6-plugins/jsjohnst.fluidapp.git`
+* `git clone git://github.com/cerb-plugins/jsjohnst.fluidapp.git`
 * In your helpdesk, enable the plugin from **Setup->Features & Plugins**.
 
 Credits
