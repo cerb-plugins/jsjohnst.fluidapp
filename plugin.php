@@ -107,6 +107,7 @@ class DAO_FluidApp {
 			$newest = 0;
 			
 			list($notifications, $null) = DAO_Notification::search(
+				array(),
 				array(
 					SearchFields_Notification::WORKER_ID => new DevblocksSearchCriteria(SearchFields_Notification::WORKER_ID,'=',$worker->id),
 					SearchFields_Notification::IS_READ => new DevblocksSearchCriteria(SearchFields_Notification::IS_READ,'=',0),
@@ -129,6 +130,7 @@ class DAO_FluidApp {
 		}
 			
 		list($notifications, $null) = DAO_Notification::search(
+			array(),
 			array(
 				SearchFields_Notification::ID => new DevblocksSearchCriteria(SearchFields_Notification::ID,'>',$newest),
 				SearchFields_Notification::WORKER_ID => new DevblocksSearchCriteria(SearchFields_Notification::WORKER_ID,'=',$worker->id),
@@ -151,7 +153,7 @@ class DAO_FluidApp {
 		$_SESSION["fluid_latest_seen"] = $newest;
 
 		return $notifications;
-	} 
+	}
 	
 };
 
