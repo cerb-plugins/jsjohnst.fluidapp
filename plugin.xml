@@ -4,7 +4,7 @@
 	<name>Fluid.app Integration</name>
 	<description>Provides data needed by Fluid.app for Growl alerts and Mac OS X dock badges</description>
 	<author>Jeremy Johnstone @ LinkedIn</author>
-	<version>1.0.10</version>
+	<version>1.0.11</version>
 	<link>http://www.cerbweb.com/book/latest/plugins/jsjohnst.fluidapp.html</link>
 	<image>plugin.png</image>
  
