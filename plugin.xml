@@ -4,20 +4,20 @@
 	<name>Fluid.app Integration</name>
 	<description>Provides data needed by Fluid.app for Growl alerts and Mac OS X dock badges</description>
 	<author>Jeremy Johnstone @ Tumblr</author>
-	<version>1.0.13</version>
+	<version>1.0.14</version>
 	<link>http://www.cerbweb.com/book/latest/plugins/jsjohnst.fluidapp.html</link>
 	<image>plugin.png</image>
  
 	<!-- Requirements -->
 
 	<requires>
-		<app_version min="6.4" max="6.8.99" />
+		<app_version min="6.4" max="6.9.99" />
 	</requires>
  
  	<!-- Plugin Dependencies -->
 	
 	<dependencies>
-		<require plugin_id="cerberusweb.core" version="6.1.0" />
+		<require plugin_id="cerberusweb.core" version="6.4.0" />
 	</dependencies>
 
 	<!-- Extensions -->
