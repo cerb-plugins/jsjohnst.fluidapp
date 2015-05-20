@@ -1,9 +1,8 @@
 <?php
 class FluidAppDataPlugin {
-    static public function getTemplateHandler() {
-    	$worker = CerberusApplication::getActiveWorker();
-		
-        $tpl = DevblocksPlatform::getTemplateService();
+	static public function getTemplateHandler() {
+		$worker = CerberusApplication::getActiveWorker();
+		$tpl = DevblocksPlatform::getTemplateService();
 
 		// Preferences
 
@@ -12,7 +11,7 @@ class FluidAppDataPlugin {
 
 		if($badge_enabled) {
 			$counts = DAO_FluidApp::getBadgeCounts($worker->id);
-        	$tpl->assign('badge_count', $counts);
+			$tpl->assign('badge_count', $counts);
 		}
 
 		$growl_enabled = DAO_WorkerPref::get($worker->id, 'fluidapp.growl_enabled', 1);
@@ -28,7 +27,8 @@ class FluidAppDataPlugin {
 			// Build an abstract notification array
 			if(!empty($notifications))
 			foreach($notifications as $event) {
-				$message = $event[SearchFields_Notification::MESSAGE];
+				$entry = json_decode($event[SearchFields_Notification::ENTRY_JSON], true);
+				$message = CerberusContexts::formatActivityLogEntry($entry,'text');
 				$is_sticky = false;
 				
 				// Does the worker want this substring to be sticky in Growl?
@@ -40,21 +40,26 @@ class FluidAppDataPlugin {
 					}
 				}
 				
+				$url = null;
+				
+				if(isset($entry['urls']) && is_array($entry['urls']))
+					@$url = current($entry['urls']);
+				
 				// Push
 				$alerts[] = array(
 					'id' => $event[SearchFields_Notification::ID],
 					'title' => $message,
 					'description' => '',
-					'url' => $event[SearchFields_Notification::URL],
+					'url' => $url,
 					'is_sticky' => $is_sticky,
 				);
 			}
 			
-    		$tpl->assign("notifications_json", json_encode($alerts));
+			$tpl->assign("notifications_json", json_encode($alerts));
 		}
 
-        return $tpl;
-    }
+		return $tpl;
+	}
 	
 };
 
