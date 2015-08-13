@@ -5,6 +5,7 @@
 <input type="hidden" name="c" value="preferences">
 <input type="hidden" name="a" value="saveTab">
 <input type="hidden" name="ext_id" value="jsjohnst.fluidapp.pref">
+<input type="hidden" name="_csrf_token" value="{$session.csrf_token}">
 	
 <b>Dock:</b><br>
 <label><input type="checkbox" name="badge_enabled" value="1" {if $badge_enabled}checked="checked"{/if}> Show Unread Notifications on Dock Icon</label>
