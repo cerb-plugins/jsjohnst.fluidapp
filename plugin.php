@@ -89,7 +89,7 @@ class FluidAppDataAPIFetch extends DevblocksControllerExtension {
 	
 };
 
-class DAO_FluidApp {
+class DAO_FluidApp extends Cerb_ORMHelper {
 	static public function getBadgeCounts($worker_id) {
 		$badge_type = DAO_WorkerPref::get($worker_id, 'fluidapp.badge_type', 'notifications');
         $count = 0;
