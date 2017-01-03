@@ -1,24 +1,21 @@
 Cerb Plugins - jsjohnst.fluidapp
 ===========================================
 Copyright (C) 2010 Jeremy Johnstone
-Copyright (C) 2012 Webgroup Media, LLC.  
-[http://www.cerberusweb.com/](http://www.cerberusweb.com/)  
+Copyright (C) 2017 Webgroup Media, LLC.  
+[http://cerb.io/](http://cerb.io/)  
 
 What's this?
 ------------
-This plugin adds integrates Cerb5 with [Fluid.app](http://fluidapp.com) (a site-specific browser) on Mac OS X. 
-It features Growl alerts and a dock badge with the number of unread helpdesk notifications.
+This plugin adds integrates Cerb with [Fluid.app](http://fluidapp.com) (a site-specific browser) on Mac OS X.  It features Growl alerts and a dock badge with the number of unread helpdesk notifications.
 
 Installation
 ------------
-* Change directory to **/cerb6/storage/plugins/**
-* `git clone git://github.com/cerb-plugins/jsjohnst.fluidapp.git`
-* In your helpdesk, enable the plugin from **Setup->Features & Plugins**.
+* Download and enable the plugin in Cerb from **Setup->Plugins->Library**.
 
 Credits
 -------
 This plugin was originally developed by [Jeremy Johnstone](http://www.jeremyjohnstone.com/).
-Development is maintained by [WebGroup Media LLC.](http://www.cerberusweb.com/).  
+Development is maintained by [Webgroup Media LLC.](http://cerb.io/).  
 
 License
 -------
