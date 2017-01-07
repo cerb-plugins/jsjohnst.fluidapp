@@ -7,21 +7,21 @@
 	<version>1.0.20</version>
 	<link>http://www.cerbweb.com/book/latest/plugins/jsjohnst.fluidapp.html</link>
 	<image>plugin.png</image>
- 
+
 	<!-- Requirements -->
 
 	<requires>
-		<app_version min="7.1" max="7.3.99" />
+		<app_version min="7.3" max="7.3.99" />
 	</requires>
- 
- 	<!-- Plugin Dependencies -->
+
+	<!-- Plugin Dependencies -->
 	
 	<dependencies>
 		<require plugin_id="cerberusweb.core" version="7.3.0" />
 	</dependencies>
 
 	<!-- Extensions -->
- 
+
 	<extensions>
 		
 		<!-- Prebody Renderers -->
@@ -34,20 +34,20 @@
 				<name>FluidAppDataPreBodyRenderer</name>
 			</class>
 		</extension>
-								
+		
 		<!-- Controllers -->
 		
-        <extension point="devblocks.controller">
-            <id>jsjohnst.fluidapp.apifetch</id>
-            <name>Fluid.app API Fetch</name>
-            <class>
-                <file>plugin.php</file>
-                <name>FluidAppDataAPIFetch</name>
-            </class>
-            <params>
-                <param key="uri" value="fluidapp.jsonp" />
-            </params>
-        </extension>
+		<extension point="devblocks.controller">
+			<id>jsjohnst.fluidapp.apifetch</id>
+			<name>Fluid.app API Fetch</name>
+			<class>
+				<file>plugin.php</file>
+				<name>FluidAppDataAPIFetch</name>
+			</class>
+			<params>
+				<param key="uri" value="fluidapp.jsonp" />
+			</params>
+		</extension>
 
 		<!-- Preference Tabs  -->
 
@@ -64,5 +64,5 @@
 			</params>
 		</extension>
 
-    </extensions> 
+	</extensions>
 </plugin>
