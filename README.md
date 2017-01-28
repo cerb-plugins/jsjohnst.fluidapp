@@ -2,7 +2,7 @@ Cerb Plugins - jsjohnst.fluidapp
 ===========================================
 Copyright (C) 2010 Jeremy Johnstone
 Copyright (C) 2017 Webgroup Media, LLC.  
-[http://cerb.io/](http://cerb.io/)  
+[http://cerb.ai/](http://cerb.ai/)  
 
 What's this?
 ------------
@@ -15,7 +15,7 @@ Installation
 Credits
 -------
 This plugin was originally developed by [Jeremy Johnstone](http://www.jeremyjohnstone.com/).
-Development is maintained by [Webgroup Media LLC.](http://cerb.io/).  
+Development is maintained by [Webgroup Media LLC.](http://cerb.ai/).  
 
 License
 -------
