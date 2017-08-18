@@ -2,7 +2,7 @@
 class FluidAppDataPlugin {
 	static public function getTemplateHandler() {
 		$worker = CerberusApplication::getActiveWorker();
-		$tpl = DevblocksPlatform::getTemplateService();
+		$tpl = DevblocksPlatform::services()->template();
 
 		// Preferences
 
@@ -90,6 +90,8 @@ class FluidAppDataAPIFetch extends DevblocksControllerExtension {
 };
 
 class DAO_FluidApp extends Cerb_ORMHelper {
+	private function __construct() {}
+	
 	static public function getBadgeCounts($worker_id) {
 		$badge_type = DAO_WorkerPref::get($worker_id, 'fluidapp.badge_type', 'notifications');
         $count = 0;
@@ -167,7 +169,7 @@ class FluidAppPreferences extends Extension_PreferenceTab {
 	function showTab() {
 		$worker = CerberusApplication::getActiveWorker();
 
-		$tpl = DevblocksPlatform::getTemplateService();
+		$tpl = DevblocksPlatform::services()->template();
 		
 		// Load worker pref for badge count
 		$badge_enabled = DAO_WorkerPref::get($worker->id, 'fluidapp.badge_enabled', 1);
